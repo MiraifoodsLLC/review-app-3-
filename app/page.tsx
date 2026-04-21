@@ -59,7 +59,7 @@ export default function Home() {
             <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 8 }}>生成されたクチコミ</p>
             <p style={{ fontSize: 14, lineHeight: 1.8, whiteSpace: "pre-wrap" }}>{reviewText}</p>
           </div>
-          <button onClick={() => { navigator.clipboard.writeText(reviewText); window.open("https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID", "_blank"); }} style={{ width: "100%", padding: 13, borderRadius: 8, border: "none", fontSize: 15, cursor: "pointer", background: "#dbeafe", color: "#1d4ed8", fontWeight: 500, marginBottom: 8 }}>
+          <button onClick={() => { navigator.clipboard.writeText(reviewText); window.open("https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU", "_blank"); }} style={{ width: "100%", padding: 13, borderRadius: 8, border: "none", fontSize: 15, cursor: "pointer", background: "#dbeafe", color: "#1d4ed8", fontWeight: 500, marginBottom: 8 }}>
             Googleマップに投稿する ↗
           </button>
           <button onClick={() => setScreen("survey")} style={{ width: "100%", padding: 13, borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 15, cursor: "pointer", background: "#fff" }}>
