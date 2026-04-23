@@ -33,13 +33,13 @@ export default function Home() {
     setReviewText(lines.join("\n"));
     setScreen("result");
   };
-
+  
   const handlePost = async () => {
     await saveToSupabase({ rating, highlight, comment });
-    navigator.clipboard.writeText(reviewText);
+    await navigator.clipboard.writeText(reviewText);
     window.open("https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU", "_blank");
   };
-
+ 
   return (
     <main style={{ maxWidth: 420, margin: "0 auto", padding: "1rem", fontFamily: "sans-serif" }}>
       {screen === "survey" ? (
