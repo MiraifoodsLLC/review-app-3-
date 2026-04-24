@@ -37,7 +37,7 @@ export default function Home() {
   const handlePost = async () => {
     await saveToSupabase({ rating, highlight, comment });
     await navigator.clipboard.writeText(reviewText);
-    window.open("https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU", "_blank");
+    location.href = "https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU";
   };
  
   return (
