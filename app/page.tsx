@@ -76,9 +76,10 @@ export default function Home() {
             <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 8 }}>生成されたクチコミ</p>
             <p style={{ fontSize: 14, lineHeight: 1.8, whiteSpace: "pre-wrap" }}>{reviewText}</p>
           </div>
+          
           <a href="https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU" onClick={handlePost} style={{ display: "block", width: "100%", padding: 13, borderRadius: 8, border: "none", fontSize: 15, cursor: "pointer", background: "#dbeafe", color: "#1d4ed8", fontWeight: 500, marginBottom: 8, textAlign: "center", textDecoration: "none", boxSizing: "border-box" }}>
-  Googleマップに投稿する ↗
-</a>
+            Googleマップに投稿する ↗
+          </a>
           
           <button onClick={() => setScreen("survey")} style={{ width: "100%", padding: 13, borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 15, cursor: "pointer", background: "#fff" }}>
             ← やり直す
