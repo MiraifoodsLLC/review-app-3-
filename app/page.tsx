@@ -75,7 +75,7 @@ export default function Home() {
           <p style={{ fontSize: 13, color: "#6b7280" }}>クチコミ文ができました！</p>
           <div style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 12, padding: "1rem", marginBottom: 12 }}>
             <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 8 }}>生成されたクチコミ</p>
-            <p style={{ fontSize: 14, lineHeight: 1.8, whiteSpace: "pre-wrap" }}>{reviewText}</p>
+            <textarea readOnly value={reviewText} onFocus={(e) => e.target.select()} style={{ width: "100%", boxSizing: "border-box", padding: 8, borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 14, lineHeight: 1.8, minHeight: 120, resize: "none", background: "#f9fafb" }} />
             <button onClick={() => { navigator.clipboard.writeText(reviewText); setCopied(true); setTimeout(() => setCopied(false), 2000); }} style={{ width: "100%", padding: 10, borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 14, cursor: "pointer", background: copied ? "#d1fae5" : "#f3f4f6", marginTop: 8 }}>
               {copied ? "✅ コピーしました！" : "📋 クチコミ文をコピーする"}
             </button>
