@@ -80,8 +80,7 @@ export default function Home() {
             <textarea readOnly value={reviewText} onFocus={(e) => e.target.select()} style={{ width: "100%", boxSizing: "border-box", padding: 8, borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 14, lineHeight: 1.8, minHeight: 120, resize: "none", background: "#f9fafb" }} />
    
           </div>
-          
-          <a href="https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU" onClick={async (e) => { e.preventDefault(); await saveToSupabase({ rating, highlight, comment }); window.location.href = "https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU"; }} style={{ display: "block", width: "100%", padding: 13, borderRadius: 8, border: "none", fontSize: 15, cursor: "pointer", background: "#dbeafe", color: "#1d4ed8", fontWeight: 500, marginBottom: 8, textAlign: "center", textDecoration: "none", boxSizing: "border-box" }}>
+         <a href="https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU" onClick={async (e) => { e.preventDefault(); await saveToSupabase({ rating, highlight, comment }); const ok = window.confirm("クチコミ文はコピーしましたか？\nコピー済みの場合はOKを押してGoogleマップへ進んでください。"); if (ok) { window.location.href = "https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU"; } }} style={{ display: "block", width: "100%", padding: 13, borderRadius: 8, border: "none", fontSize: 15, cursor: "pointer", background: "#dbeafe", color: "#1d4ed8", fontWeight: 500, marginBottom: 8, textAlign: "center", textDecoration: "none", boxSizing: "border-box" }}>
             Googleマップに投稿する ↗
           </a>
           
