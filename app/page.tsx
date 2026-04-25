@@ -81,7 +81,7 @@ export default function Home() {
    
           </div>
           
-          <a href="https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU" onClick={handlePost} style={{ display: "block", width: "100%", padding: 13, borderRadius: 8, border: "none", fontSize: 15, cursor: "pointer", background: "#dbeafe", color: "#1d4ed8", fontWeight: 500, marginBottom: 8, textAlign: "center", textDecoration: "none", boxSizing: "border-box" }}>
+          <a href="https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU" onClick={async (e) => { e.preventDefault(); await saveToSupabase({ rating, highlight, comment }); window.location.href = "https://search.google.com/local/writereview?placeid=ChIJQ_JhX9oPAWARPySrRzKjREU"; }} style={{ display: "block", width: "100%", padding: 13, borderRadius: 8, border: "none", fontSize: 15, cursor: "pointer", background: "#dbeafe", color: "#1d4ed8", fontWeight: 500, marginBottom: 8, textAlign: "center", textDecoration: "none", boxSizing: "border-box" }}>
             Googleマップに投稿する ↗
           </a>
           
